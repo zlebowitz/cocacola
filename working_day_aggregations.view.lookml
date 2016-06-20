@@ -1,6 +1,6 @@
 - view: working_day_aggregations
   derived_table:
-    sql_trigger_value: current_date()
+    sql_trigger_value: SELECT current_date()
     sql: |
       SELECT 
         bottler_id
