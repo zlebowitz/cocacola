@@ -3,11 +3,6 @@
 - include: "*.view.lookml"       # include all views in this project
 - include: "*.dashboard.lookml"  # include all dashboards in this project
 
-- explore: z_sls_export
-  label: Sales
-  
-# - explore: working_day_aggregations
-
 
 - explore: z_sls_export_custom_timeframe
   label: Sales - Custom Timeframe
@@ -19,6 +14,7 @@
 
 - explore: td_sales
   from: td_measures
+  label: Sales
   view: z_sls_export
   joins: 
     - join: working_day_aggregations
