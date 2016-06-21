@@ -62,46 +62,57 @@
 
   - dimension: bottler_id
     type: number
+    hidden: true
     sql: ${TABLE}.bottler_id
 
   - dimension: day_desc
     type: string
+    hidden: true
     sql: ${TABLE}.day_desc
 
   - dimension: day_id
     type: number
+    hidden: true
     sql: ${TABLE}.day_id
   
   - dimension: week_id
     type: number
+    hidden: true
     sql: ${TABLE}.week_id
 
   - dimension: cy_working_day
     type: number
+    hidden: true
     sql: ${TABLE}.cy_working_day
 
   - dimension: cy_working_days_ytd
     type: number
+    hidden: true
     sql: ${TABLE}.cy_working_days_ytd
 
   - dimension: cy_working_days_mtd
     type: number
+    hidden: true
     sql: ${TABLE}.cy_working_days_mtd
 
   - dimension: cy_working_days_wtd
     type: number
+    hidden: true
     sql: ${TABLE}.cy_working_days_wtd
 
   - dimension: py1_working_days_ytd
     type: number
+    hidden: true
     sql: ${TABLE}.py1_working_days_ytd
 
   - dimension: py1_working_days_mtd
     type: number
+    hidden: true
     sql: ${TABLE}.py1_working_days_mtd
 
   - dimension: py1_working_days_wtd
     type: number
+    hidden: true
     sql: ${TABLE}.py1_working_days_wtd
 
   sets:

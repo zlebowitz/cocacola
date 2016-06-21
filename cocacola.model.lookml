@@ -18,6 +18,7 @@
   view: z_sls_export
   joins: 
     - join: working_day_aggregations
+      fields: []
       relationship: many_to_one
       sql_on: 
             |
