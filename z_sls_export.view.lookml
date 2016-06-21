@@ -3,9 +3,6 @@
   view_label: Sales
   extends: [channel_by_category, channel_by_category_2, cust_lh, customer_by_category, cy_measures, date, geography_by_bottler, geography_by_bottler_territory, geography_slbu, package_by_container, package_by_serve, package_by_size, product_by_brand, product_by_category, product_by_trademark, py1_measures, py2_measures]
   fields:
-
-  - filter: report_week
-    type: string
     
   - dimension: bpp_code
     type: string
@@ -48,9 +45,9 @@
     sql: ${TABLE}.volume_type_id
 
   
-
-  - measure: count
-    type: count
-    approximate_threshold: 100000
-    drill_fields: []
+# 
+#   - measure: count
+#     type: count
+#     approximate_threshold: 100000
+#     drill_fields: []
 
