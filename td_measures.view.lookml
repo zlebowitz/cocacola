@@ -1,5 +1,5 @@
 - view: td_measures
-  extends: [z_sls_export]
+  extends: [z_sls_export, date]
   fields: 
   
   - filter: report_week
