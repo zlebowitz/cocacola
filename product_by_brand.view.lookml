@@ -80,16 +80,16 @@
     view_label: "Product by Brand"
     hidden: true
     type: string
-    sql: ${TABLE}.prod_lh1_l4_cd
+    sql: ${TABLE}.prod_lh1_l5_cd
 
   - dimension: prod_lh1_l5_desc
     view_label: "Product by Brand"
     label: "5 - Category"
     type: string
-    sql: ${TABLE}.prod_lh1_l4_desc
-    order_by_field: prod_lh1_l4_sort_order
-    required_fields: [prod_lh1_l4_cd]
-    drill_fields: [prod_lh1_l3_desc, prod_lh1_l2_desc, prod_lh1_l1_desc]
+    sql: ${TABLE}.prod_lh1_l5_desc
+    order_by_field: prod_lh1_l5_sort_order
+    required_fields: [prod_lh1_l5_cd]
+    drill_fields: [prod_lh1_l4_desc, prod_lh1_l3_desc, prod_lh1_l2_desc, prod_lh1_l1_desc]
 
   - dimension: prod_lh1_l5_sort_order
     view_label: "Product by Brand"
