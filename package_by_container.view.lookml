@@ -70,7 +70,7 @@
 
   - dimension: pack_lh1_l4_desc
     view_label: "Package by Container"
-    label: "4 - Package_Segment-Ref/NRref "
+    label: "4 - Package Segment"
     type: string
     sql: ${TABLE}.pack_lh1_l4_desc
     order_by_field: pack_lh1_l4_sort_order
@@ -91,7 +91,7 @@
 
   - dimension: pack_lh1_l5_desc
     view_label: "Package by Container"
-    label: "5 - Package_Segment"
+    label: "5 - Package Segment"
     type: string
     sql: ${TABLE}.pack_lh1_l5_desc
     order_by_field: pack_lh1_l5_sort_order

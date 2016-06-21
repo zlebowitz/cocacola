@@ -62,6 +62,7 @@
     label: "Total Unit Cases"
     view_label: "Sales"
     group_label: "Unit Cases"
+    value_format_name: decimal_2
     
   - measure: cy_unit_cases_wtd
     type: sum
