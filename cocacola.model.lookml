@@ -4,5 +4,6 @@
 - include: "*.dashboard.lookml"  # include all dashboards in this project
 
 - explore: z_sls_export
+  label: Sales
 
 - explore: working_day_aggregations
