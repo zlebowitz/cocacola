@@ -1,4 +1,3 @@
-- explore: t_wrk_days_445
 - view: t_wrk_days_445
   sql_table_name: report.t_wrk_days_445
   fields:
