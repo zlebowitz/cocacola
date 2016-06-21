@@ -59,56 +59,56 @@
   
  
   - measure: total_cy_bottler_standard_cases
-    view_label: "CY Measures"
+    view_label: "Measures - CY"
     type: sum
     sql: ${cy_bottler_standard_cases}
 
   - measure: total_cy_freight_revenue
-    view_label: "CY Measures"
+    view_label: "Measures - CY"
     type: sum
     sql: ${cy_freight_revenue}
 
   - measure: total_cy_gallons
-    view_label: "CY Measures"
+    view_label: "Measures - CY"
     type: sum
     sql: ${cy_gallons}
 
   - measure: total_cy_gross_revenue
-    view_label: "CY Measures"
+    view_label: "Measures - CY"
     type: sum
     sql: ${cy_gross_revenue}
 
   - measure: total_cy_individual_transactions
-    view_label: "CY Measures"
+    view_label: "Measures - CY"
     type: sum
     sql: ${cy_individual_transactions}
 
   - measure: total_cy_liters
-    view_label: "CY Measures"
+    view_label: "Measures - CY"
     type: sum
     sql: ${cy_liters}
 
   - measure: total_cy_physical_cases
-    view_label: "CY Measures"
+    view_label: "Measures - CY"
     type: sum
     sql: ${cy_physical_cases}
 
   - measure: total_cy_promotional_discount
-    view_label: "CY Measures"
+    view_label: "Measures - CY"
     type: sum
     sql: ${cy_promotional_discount}
 
   - measure: total_cy_purchase_transactions
-    view_label: "CY Measures"
+    view_label: "Measures - CY"
     type: sum
     sql: ${cy_purchase_transactions}
 
   - measure: total_cy_trade_discount
-    view_label: "CY Measures"
+    view_label: "Measures - CY"
     type: sum
     sql: ${cy_trade_discount}
 
   - measure: total_cy_unit_cases
-    view_label: "CY Measures"
+    view_label: "Measures - CY"
     type: sum
     sql: ${cy_unit_cases}

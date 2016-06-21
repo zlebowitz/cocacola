@@ -59,56 +59,56 @@
   
  
   - measure: total_py1_bottler_standard_cases
-    view_label: "PY1 Measures"
+    view_label: "Measures - PY1"
     type: sum
     sql: ${py1_bottler_standard_cases}
 
   - measure: total_py1_freight_revenue
-    view_label: "PY1 Measures"
+    view_label: "Measures - PY1"
     type: sum
     sql: ${py1_freight_revenue}
 
   - measure: total_py1_gallons
-    view_label: "PY1 Measures"
+    view_label: "Measures - PY1"
     type: sum
     sql: ${py1_gallons}
 
   - measure: total_py1_gross_revenue
-    view_label: "PY1 Measures"
+    view_label: "Measures - PY1"
     type: sum
     sql: ${py1_gross_revenue}
 
   - measure: total_py1_individual_transactions
-    view_label: "PY1 Measures"
+    view_label: "Measures - PY1"
     type: sum
     sql: ${py1_individual_transactions}
 
   - measure: total_py1_liters
-    view_label: "PY1 Measures"
+    view_label: "Measures - PY1"
     type: sum
     sql: ${py1_liters}
 
   - measure: total_py1_physical_cases
-    view_label: "PY1 Measures"
+    view_label: "Measures - PY1"
     type: sum
     sql: ${py1_physical_cases}
 
   - measure: total_py1_promotional_discount
-    view_label: "PY1 Measures"
+    view_label: "Measures - PY1"
     type: sum
     sql: ${py1_promotional_discount}
 
   - measure: total_py1_purchase_transactions
-    view_label: "PY1 Measures"
+    view_label: "Measures - PY1"
     type: sum
     sql: ${py1_purchase_transactions}
 
   - measure: total_py1_trade_discount
-    view_label: "PY1 Measures"
+    view_label: "Measures - PY1"
     type: sum
     sql: ${py1_trade_discount}
 
   - measure: total_py1_unit_cases
-    view_label: "PY1 Measures"
+    view_label: "Measures - PY1"
     type: sum
     sql: ${py1_unit_cases}
