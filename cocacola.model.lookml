@@ -6,7 +6,7 @@
 - explore: z_sls_export
   label: Sales
   
-- explore: working_day_aggregations
+# - explore: working_day_aggregations
 
 
 - explore: z_sls_export_custom_timeframe
@@ -16,3 +16,14 @@
       type: left_outer
       relationship: many_to_one
       sql_on: ${z_sls_export_custom_timeframe.geo_lh1_l1_cd} = ${working_day_aggregations_templated.bottler_id}
+
+- explore: td_sales
+  from: td_measures
+  view: z_sls_export
+  joins: 
+    - join: working_day_aggregations
+      relationship: many_to_one
+      sql_on: 
+            |
+            ${z_sls_export.day_id} = ${working_day_aggregations.day_id} 
+            AND ${z_sls_export.geo_lh1_l1_cd} = ${working_day_aggregations.bottler_id}
