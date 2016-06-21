@@ -1,7 +1,21 @@
 - view: z_sls_export
   sql_table_name: report.z_sls_export
   view_label: Sales
-  extends: [channel_by_category, channel_by_category_2, customer_by_category, cy_measures, geography_by_bottler, geography_by_bottler_territory, geography_slbu, package_by_container, package_by_serve, package_by_size, product_by_brand, product_by_category, product_by_trademark, py1_measures, py2_measures]
+  extends: [channel_by_category, 
+            channel_by_category_2, 
+            customer_by_category, 
+            cy_measures, 
+            geography_by_bottler, 
+            geography_by_bottler_territory, 
+            geography_slbu, 
+            package_by_container, 
+            package_by_serve, 
+            package_by_size, 
+            product_by_brand, 
+            product_by_category, 
+            product_by_trademark, 
+            py1_measures, 
+            py2_measures]
   fields:
     
   - dimension: bpp_code
