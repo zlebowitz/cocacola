@@ -8,21 +8,25 @@
     
   - dimension: is_report_week_wd
     type: yesno
+    hidden: true
     sql: |
         {% condition report_week %} ${working_day_aggregations.week_id} {% endcondition %}
 
   - dimension: is_report_mtd_wd
     type: yesno
+    hidden: true
     sql: |
         {% parameter report_week %} <= ${working_day_aggregations.week_id} 
 
   - dimension: is_this_week
     type: yesno
+    hidden: true
     sql: |  
         {% condition report_week %} ${week_id} {% endcondition %}
         
   - dimension: is_before_this_week
     type: yesno
+    hidden: true
     sql: |  
         ${week_id} <= {% parameter report_week %} 
 

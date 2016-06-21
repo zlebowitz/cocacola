@@ -56,7 +56,7 @@
     sql: ${TABLE}.sales_type_id
 
   - dimension: volume_type_desc
-    label: "Volumen Type"
+    label: "Volume Type"
     type: string
     sql: ${TABLE}.volume_type_desc
 
