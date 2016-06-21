@@ -7,7 +7,7 @@
 #     timeframes: [time, date, week, month]
 #     sql: ${TABLE}.day_date
 
-  - filter: day_desc
+  - dimension: day_desc
     type: string
     sql: ${TABLE}.day_desc
 
