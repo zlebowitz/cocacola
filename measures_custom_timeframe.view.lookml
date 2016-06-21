@@ -1,5 +1,23 @@
 - view: measures_custom_timeframe
   fields:
+  
+####################################
+##### Unit Cases WD
+####################################
+    - measure: unit_cases_wd
+      view_label: Measures - Calculated
+      type: number
+      sql: |
+        ${total_cy_unit_cases}/${working_day_aggregations_templated.max_cy_working_days} 
+      value_format_name: decimal_2
+  
+    - measure: unit_cases_py1_wd
+      view_label: Measures - Calculated
+      type: number
+      sql: |
+        ${total_py1_unit_cases}/${working_day_aggregations_templated.max_py1_working_days} 
+      value_format_name: decimal_2
+  
 
 ####################################
 ##### Unit Cases vs PY
