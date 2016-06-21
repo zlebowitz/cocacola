@@ -4,7 +4,7 @@
   extends: [channel_by_category, channel_by_category_2, cust_lh, customer_by_category, cy_measures, date, geography_by_bottler, geography_by_bottler_territory, geography_slbu, package_by_container, package_by_serve, package_by_size, product_by_brand, product_by_category, product_by_trademark, py1_measures, py2_measures]
   fields:
 
-  - filter: this_week
+  - filter: report_week
     type: string
     
   - dimension: bpp_code
@@ -48,29 +48,6 @@
     sql: ${TABLE}.volume_type_id
 
   
-  - dimension: is_this_week
-    type: yesno
-    sql: |  
-        {% condition this_week %} ${week_id} {% endcondition %}
-        
-  - dimension: is_before_this_week
-    type: yesno
-    sql: |  
-        ${week_id} <= {% parameter this_week %} 
-
-  - measure: wtd_unit_cases
-    type: sum
-    filters: 
-      is_this_week: yes
-    sql: ${cy_unit_cases}
-    value_format_name: decimal_2
-
-  - measure: mtd_unit_cases
-    type: sum
-    filters: 
-      is_before_this_week: yes
-    sql: ${cy_unit_cases}
-    value_format_name: decimal_2
 
   - measure: count
     type: count

@@ -9,12 +9,12 @@
     - join: working_day_aggregations_templated
       type: left_outer
       relationship: many_to_one
-      sql_on: ${z_sls_export.geo_lh1_l1_cd} = ${working_day_aggregations_templated.bottler_id}=======
+      sql_on: ${z_sls_export.geo_lh1_l1_cd} = ${working_day_aggregations_templated.bottler_id}
 
 - explore: working_day_aggregations
 
 - explore: td_sales
-  from: z_sls_export
+  from: td_measures
   view: z_sls_export
   joins: 
     - join: working_day_aggregations
@@ -22,4 +22,4 @@
       sql_on: 
             |
             ${z_sls_export.day_id} = ${working_day_aggregations.day_id} 
-            AND ${z_sls_export.day_id}
+            AND ${z_sls_export.geo_lh1_l1_cd} = ${working_day_aggregations.bottler_id}

@@ -6,6 +6,8 @@
         bottler_id
       , day_desc
       , day_id
+      , week_id
+      , month_desc
       , cy_working_day
       , sum(cy_working_day)
         OVER (
@@ -69,6 +71,10 @@
   - dimension: day_id
     type: number
     sql: ${TABLE}.day_id
+  
+  - dimension: week_id
+    type: number
+    sql: ${TABLE}.week_id
 
   - dimension: cy_working_day
     type: number
@@ -97,11 +103,6 @@
   - dimension: py1_working_days_wtd
     type: number
     sql: ${TABLE}.py1_working_days_wtd
-  
-  
-  - measure: cy_working_days
-    type: max
-    sql: ${cy_working_day}
 
   sets:
     detail:
