@@ -3792,6 +3792,37 @@
     view_label: "Date"
     type: string
     sql: ${TABLE}.year_id
+  
+  - filter: this_week
+    type: string
+#     suggest_explore: t_wrk_days_445
+#     suggest_dimension: t_wrk_days_445.month_desc
+    
+  
+  - dimension: is_this_week
+    type: yesno
+    sql: |  
+        {% condition this_week %} ${week_id} {% endcondition %}
+        
+  - dimension: is_before_this_week
+    type: yesno
+    sql: |  
+        ${week_id} <= {% parameter this_week %} 
+
+  - measure: wtd_unit_cases
+    type: sum
+    filters: 
+      is_this_week: yes
+    sql: ${cy_unit_cases}
+    value_format_name: decimal_2
+
+  - measure: mtd_unit_cases
+    type: sum
+    filters: 
+      is_before_this_week: yes
+    sql: ${cy_unit_cases}
+    value_format_name: decimal_2
+
 
   - measure: count
     type: count
