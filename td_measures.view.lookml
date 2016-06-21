@@ -16,7 +16,7 @@
     type: yesno
     hidden: true
     sql: |
-        {% parameter report_week %} <= ${working_day_aggregations.week_id} 
+        ${working_day_aggregations.week_id} <=  {% parameter report_week %}
 
   - dimension: is_this_week
     type: yesno
