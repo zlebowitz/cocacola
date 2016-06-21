@@ -38,11 +38,11 @@
     sql: ${cy_working_days}
     
   - measure: max_py1_working_days
-    view_label: Measures - Working Days
+    view_label: Sales Measures - Working Days
     type: max
     sql: ${py1_working_days}
 
   - measure: max_py2_working_days
-    view_label: Measures - Working Days
+    view_label: Sales Measures - Working Days
     type: max
     sql: ${py2_working_days}
