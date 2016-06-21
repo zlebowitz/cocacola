@@ -6,10 +6,12 @@
     
   - dimension: bpp_code
     type: string
+    hidden: true
     sql: ${TABLE}.bpp_code
 
   - dimension: currency_id
     type: number
+    hidden: true
     sql: ${TABLE}.currency_id
 
   - dimension: outlet_desc
@@ -22,6 +24,7 @@
 
   - dimension: product_desc
     type: string
+    hidden: true
     sql: ${TABLE}.product_desc
 
   - dimension: product_id
@@ -30,17 +33,21 @@
 
   - dimension: sales_type_desc
     type: string
+    label: "Sales Type"
     sql: ${TABLE}.sales_type_desc
 
   - dimension: sales_type_id
     type: number
+    hidden: true
     sql: ${TABLE}.sales_type_id
 
   - dimension: volume_type_desc
+    label: "Volumen Type"
     type: string
     sql: ${TABLE}.volume_type_desc
 
   - dimension: volume_type_id
     type: number
+    hidden: true
     sql: ${TABLE}.volume_type_id
 
