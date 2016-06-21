@@ -97,6 +97,11 @@
   - dimension: py1_working_days_wtd
     type: number
     sql: ${TABLE}.py1_working_days_wtd
+  
+  
+  - measure: cy_working_days
+    type: max
+    sql: ${cy_working_day}
 
   sets:
     detail:
