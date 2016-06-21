@@ -95,7 +95,7 @@
     view_label: "Product by Brand"
     hidden: true
     type: number
-    sql: ${TABLE}.prod_lh1_l4_sort_order 
+    sql: ${TABLE}.prod_lh1_l5_sort_order 
 ## Unused fields
 #   - dimension: prod_lh1_l6_cd
 #     view_label: "Product by Brand"
