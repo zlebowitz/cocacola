@@ -11,6 +11,7 @@
     view_label: "Date"
     type: string
     sql: ${TABLE}.day_desc
+    order_by_field: day_id
 
   - dimension: day_id
     view_label: "Date"
@@ -21,6 +22,7 @@
     view_label: "Date"
     type: string
     sql: ${TABLE}.month_desc
+    order_by_field: month_id
 
   - dimension: month_id
     view_label: "Date"
@@ -31,6 +33,7 @@
     view_label: "Date"
     type: string
     sql: ${TABLE}.quarter_desc
+    order_by_field: quarter_id
 
   - dimension: quarter_id
     view_label: "Date"
@@ -46,6 +49,7 @@
     view_label: "Date"
     type: string
     sql: ${TABLE}.week_desc
+    order_by_field: week_id
 
   - dimension: week_id
     view_label: "Date"
@@ -56,6 +60,7 @@
     view_label: "Date"
     type: string
     sql: ${TABLE}.year_desc
+    order_by_field: year_id
 
   - dimension: year_id
     view_label: "Date"
