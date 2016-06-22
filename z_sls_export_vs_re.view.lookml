@@ -1,14 +1,3 @@
-- explore: z_sls_export_vs_re
-  always_filter: 
-    has_rolling_estimate: Yes
-  joins: 
-  - join: t_vol_wk_re
-    type: left_outer
-    relationship: many_to_one
-    sql_on: |
-            ${z_sls_export_vs_re.week_id} = ${t_vol_wk_re.week_id} 
-            AND ${z_sls_export_vs_re.geo_lh1_l4_cd} = ${t_vol_wk_re.geo_lh1_l3_cd}
-
 - view: z_sls_export_vs_re
   sql_table_name: |
     [tccc-sbox-volume-south-latin:report.z_sls_export]
