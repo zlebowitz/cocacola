@@ -8,26 +8,30 @@
   fields: 
 
   - dimension: chan_lh2_l1_cd
-    view_label: "Channel by Category 2"
+    view_label: "Channel"
+    group_label: "Channel by Category 2"
     hidden: true
     type: number
     sql: ${TABLE}.chan_lh2_l1_cd
 
   - dimension: chan_lh2_l1_desc
+    view_label: "Channel"
     label: "1 - Sub Channel"
-    view_label: "Channel by Category 2"
+    group_label: "Channel by Category 2"
     type: string
     sql: ${TABLE}.chan_lh2_l1_desc
     required_fields: [chan_lh2_l1_cd]
 
   - dimension: chan_lh2_l2_cd
-    view_label: "Channel by Category 2"
+    view_label: "Channel"
+    group_label: "Channel by Category 2"
     hidden: true
     type: string
     sql: ${TABLE}.chan_lh2_l2_cd
 
   - dimension: chan_lh2_l2_desc
-    view_label: "Channel by Category 2"
+    view_label: "Channel"
+    group_label: "Channel by Category 2"
     label: "2 - Canal"
     type: string
     sql: ${TABLE}.chan_lh2_l2_desc
@@ -36,19 +40,22 @@
     drill_fields: [chan_lh2_l1_desc]
     
   - dimension: chan_lh2_l2_sort_order
-    view_label: "Channel by Category 2"
+    view_label: "Channel"
+    group_label: "Channel by Category 2"
     hidden: true
     type: number
     sql: ${TABLE}.chan_lh2_l2_sort_order
 
   - dimension: chan_lh2_l3_cd
-    view_label: "Channel by Category 2"
+    view_label: "Channel"
+    group_label: "Channel by Category 2"
     hidden: true
     type: string
     sql: ${TABLE}.chan_lh2_l3_cd
 
   - dimension: chan_lh2_l3_desc
-    view_label: "Channel by Category 2"
+    view_label: "Channel"
+    group_label: "Channel by Category 2"
     label: "3 - Sub-grupo" 
     type: string
     sql: ${TABLE}.chan_lh2_l3_desc
@@ -57,19 +64,22 @@
     drill_fields: [chan_lh2_l2_desc, chan_lh2_l1_desc]
     
   - dimension: chan_lh2_l3_sort_order
-    view_label: "Channel by Category 2"
+    view_label: "Channel"
+    group_label: "Channel by Category 2"
     hidden: true
     type: number
     sql: ${TABLE}.chan_lh2_l3_sort_order
 
   - dimension: chan_lh2_l4_cd
-    view_label: "Channel by Category 2"
+    view_label: "Channel"
+    group_label: "Channel by Category 2"
     hidden: true
     type: string
     sql: ${TABLE}.chan_lh2_l4_cd
 
   - dimension: chan_lh2_l4_desc
-    view_label: "Channel by Category 2"
+    view_label: "Channel"
+    group_label: "Channel by Category 2"
     label: "4 - Grupo Canales"
     type: string
     sql: ${TABLE}.chan_lh2_l4_desc
@@ -78,7 +88,8 @@
     drill_fields: [chan_lh2_l3_desc, chan_lh2_l2_desc, chan_lh2_l1_desc]
 
   - dimension: chan_lh2_l4_sort_order
-    view_label: "Channel by Category 2"
+    view_label: "Channel"
+    group_label: "Channel by Category 2"
     hidden: true
     type: number
     sql: ${TABLE}.chan_lh2_l4_sort_order
