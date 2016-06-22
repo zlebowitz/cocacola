@@ -2,6 +2,11 @@
   sql_table_name: report.t_wrk_days_445
   fields:
 
+  - dimension: unique_key
+    type: number
+    sql: ${bottler_id} * 100000 + ${day_id}
+    primary_key: true
+
   - dimension: bottler_id
     type: number
     sql: ${TABLE}.bottler_id
@@ -695,8 +700,13 @@
     type: number
     sql: ${TABLE}.year_offset
 
-  - measure: count
-    type: count
-    approximate_threshold: 100000
-    drill_fields: []
+  - measure: total_cy_working_days
+    type: sum_distinct
+    sql_distinct_key: ${day_id}
+    sql: ${cy_working_day}
+  
+  - measure: total_py_working_days
+    type: sum_distinct
+    sql_distinct_key: ${day_id}
+    sql: ${py1_working_day}
 
