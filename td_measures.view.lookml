@@ -157,6 +157,30 @@
     sql: ${uc_vs_py1_mtd} / ${py1_uc_per_wd_mtd}
     value_format_name: percent_2
   
+  - measure: cy_uc_per_wd_cp
+    type: number
+    hidden: true
+    sql: ${total_cy_unit_cases} / ${t_wrk_days_445.total_cy_working_days}
+  
+  - measure: py_uc_per_wd_cp
+    type: number
+    hidden: true
+    sql: ${total_py1_unit_cases} / ${t_wrk_days_445.total_py_working_days}
+  
+  
+  - measure: uc_vs_py1_cp
+    type: number
+    group_label: "Unit Cases CP"
+    sql: ${cy_uc_per_wd_cp} - ${py_uc_per_wd_cp}
+    value_format_name: decimal_2
+  
+  - measure: uc_vs_py1_cp_percent_change
+    type: number
+    group_label: "Unit Cases CP"
+    sql: ${uc_vs_py1_cp} / ${py_uc_per_wd_cp}
+    value_format_name: percent_2
+  
+  
 ### Gross Revenue
 
   - measure: total_cy_gross_revenue
@@ -253,6 +277,27 @@
     group_label: "Gross Revenue MTD"
     sql: ${rev_vs_py1_mtd} / ${py1_rev_per_wd_mtd}
     value_format_name: percent_2
-
   
+  - measure: cy_rev_per_wd_cp
+    type: number
+    hidden: true
+    sql: ${total_cy_gross_revenue} / ${t_wrk_days_445.total_cy_working_days}
+  
+  - measure: py_rev_per_wd_cp
+    type: number
+    hidden: true
+    sql: ${total_py1_gross_revenue} / ${t_wrk_days_445.total_py_working_days}
+  
+  
+  - measure: rev_vs_py1_cp
+    type: number
+    group_label: "Gross Revenue CP"
+    sql: ${cy_rev_per_wd_cp} - ${py_rev_per_wd_cp}
+    value_format_name: decimal_2
+  
+  - measure: rev_vs_py1_cp_percent_change
+    type: number
+    group_label: "Gross Revenue CP"
+    sql: ${rev_vs_py1_cp} / ${py_rev_per_wd_cp}
+    value_format_name: percent_2
   
