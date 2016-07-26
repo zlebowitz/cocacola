@@ -5,14 +5,16 @@
 ##### Unit Cases WD
 ####################################
     - measure: unit_cases_wd
-      view_label: Measures - Calculated
+      group_label: "WD - Total Period"
+      view_label: "Measures - Unit Cases"
       type: number
       sql: |
         ${total_cy_unit_cases}/${working_day_aggregations_templated.max_cy_working_days} 
       value_format_name: decimal_2
   
     - measure: unit_cases_py1_wd
-      view_label: Measures - Calculated
+      group_label: "WD - Total Period"
+      view_label: "Measures - Unit Cases"
       type: number
       sql: |
         ${total_py1_unit_cases}/${working_day_aggregations_templated.max_py1_working_days} 
@@ -23,7 +25,8 @@
 ##### Unit Cases vs PY
 ####################################
     - measure: unit_cases_vs_py_wd
-      view_label: Measures - Calculated
+      group_label: "WD - Total Period"
+      view_label: "Measures - Unit Cases"
       type: number
       sql: |
         ${total_cy_unit_cases}/${working_day_aggregations_templated.max_cy_working_days} 
@@ -32,7 +35,8 @@
       value_format_name: decimal_2
 
     - measure: unit_cases_vs_py_wd_percent
-      view_label: Measures - Calculated
+      group_label: "WD - Total Period"
+      view_label: "Measures - Unit Cases"
       type: number
       sql: |
         (
@@ -53,7 +57,8 @@
 ##### Unit Cases Cycling
 ####################################
     - measure: unit_cases_cycling_wd
-      view_label: Measures - Calculated
+      group_label: "WD - Total Period"
+      view_label: "Measures - Unit Cases"
       type: number
       sql: |
         ${total_py1_unit_cases}/${working_day_aggregations_templated.max_py1_working_days} 
@@ -62,7 +67,8 @@
       value_format_name: decimal_2
 
     - measure: unit_cases_cycling_wd_percent
-      view_label: Measures - Calculated
+      group_label: "WD - Total Period"
+      view_label: "Measures - Unit Cases"
       type: number
       sql: |
         (

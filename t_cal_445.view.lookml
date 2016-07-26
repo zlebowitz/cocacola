@@ -1,3 +1,6 @@
+- explore: t_cal_445
+  hidden: true
+  
 - view: t_cal_445
   sql_table_name: report.t_cal_445
   fields:

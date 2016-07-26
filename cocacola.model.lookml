@@ -3,16 +3,45 @@
 - include: "*.view.lookml"       # include all views in this project
 - include: "*.dashboard.lookml"  # include all dashboards in this project
 
-
-- explore: z_sls_export_custom_timeframe
-  label: Sales - Custom Timeframe
-#   always_filter: 
-#     date: 7 days
+- explore: z_sls_export_time_series
+  label: Sales - Time Series
   joins: 
+    - join: working_day_aggregations_time_series
+      type: left_outer
+      relationship: many_to_one
+      sql_on: |
+        ${z_sls_export_time_series.geo_lh1_l1_cd} = ${working_day_aggregations_time_series.bottler_id}
+        AND 
+        ${z_sls_export_time_series.day_id} = ${working_day_aggregations_time_series.day_id}         
+
+
+
+- explore: sales_2016
+  joins: 
+    - join: working_day_aggregations_time_series
+      type: left_outer
+      relationship: many_to_one
+      sql_on: |
+        ${sales_2016.geo_lh1_l1_cd} = ${working_day_aggregations_time_series.bottler_id}
+        AND 
+        ${sales_2016.day_id} = ${working_day_aggregations_time_series.day_id}         
+
     - join: working_day_aggregations_templated
       type: left_outer
       relationship: many_to_one
-      sql_on: ${z_sls_export_custom_timeframe.geo_lh1_l1_cd} = ${working_day_aggregations_templated.bottler_id}
+      sql_on: ${sales_2016.geo_lh1_l1_cd} = ${working_day_aggregations_templated.bottler_id}
+
+
+
+# - explore: z_sls_export_custom_timeframe
+#   label: Sales - Custom Timeframe
+# #   always_filter: 
+# #     date: 7 days
+#   joins: 
+#     - join: working_day_aggregations_templated
+#       type: left_outer
+#       relationship: many_to_one
+#       sql_on: ${z_sls_export_custom_timeframe.geo_lh1_l1_cd} = ${working_day_aggregations_templated.bottler_id}
 
 - explore: td_sales
   from: td_measures

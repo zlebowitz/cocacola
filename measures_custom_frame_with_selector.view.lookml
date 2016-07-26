@@ -1,6 +1,6 @@
 
 - explore: z_sls_export_custom_timeframe_with_selector
-  view: z_sls_export_custom_timeframe
+  view: sales_2016
   from: z_sls_export_custom_timeframe_with_selector
   label: Sales - Custom Timeframe - Metric Selector
 #   always_filter: 
@@ -9,7 +9,7 @@
     - join: working_day_aggregations_templated
       type: left_outer
       relationship: many_to_one
-      sql_on: ${z_sls_export_custom_timeframe.geo_lh1_l1_cd} = ${working_day_aggregations_templated.bottler_id}
+      sql_on: ${sales_2016.geo_lh1_l1_cd} = ${working_day_aggregations_templated.bottler_id}
 
 
 - view: z_sls_export_custom_timeframe_with_selector

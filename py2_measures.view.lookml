@@ -118,6 +118,7 @@
     sql: ${py2_trade_discount}
 
   - measure: total_py2_unit_cases
-    view_label: "Sales Measures - PY2"
+    view_label: "Measures - Unit Cases"
+    label: "PY2 Unit Cases"
     type: sum
     sql: ${py2_unit_cases}

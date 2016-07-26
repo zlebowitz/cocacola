@@ -1,4 +1,5 @@
 - explore: nielsen_global_category_by_pack_size_hierarchy
+  hidden: true
 - view: nielsen_global_category_by_pack_size_hierarchy
   derived_table:
     sql_trigger_value: select current_date

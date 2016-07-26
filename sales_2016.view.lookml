@@ -1,5 +1,5 @@
-- view: z_sls_export_time_series
-  sql_table_name: report.z_sls_export
+- view: sales_2016
+  sql_table_name: report.t_sls_act_445_20160101
   view_label: Sales Dimensions
   extends: [channel_by_category, 
             channel_by_category_2, 
@@ -17,8 +17,12 @@
             py1_measures, 
             py2_measures,
             time_series_measures,
-            date]
+            date,
+            measures_custom_timeframe]
   fields:
+  - filter: date_range
+    type: date
+    label: "CP - Date Range"
     
   - dimension: bpp_code
     type: string

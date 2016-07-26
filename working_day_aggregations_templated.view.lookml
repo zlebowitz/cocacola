@@ -7,7 +7,7 @@
         , sum(py1_working_day) as py1_working_days
         , sum(py2_working_day) as py2_working_days
          FROM [tccc-sbox-volume-south-latin:report.t_wrk_days_445] 
-         WHERE {% condition z_sls_export_custom_timeframe.date_range %} day_date {% endcondition %}
+         WHERE {% condition sales_2016.date_range %} day_date {% endcondition %}
          GROUP BY 1
 
   fields:
@@ -38,11 +38,13 @@
     sql: ${cy_working_days}
     
   - measure: max_py1_working_days
-    view_label: Sales Measures - Working Days
+    view_label: "Measures - Working Days"
+    group_label: "WD - Total Period"
     type: max
     sql: ${py1_working_days}
 
   - measure: max_py2_working_days
-    view_label: Sales Measures - Working Days
+    view_label: "Measures - Working Days"
+    group_label: "WD - Total Period"
     type: max
     sql: ${py2_working_days}

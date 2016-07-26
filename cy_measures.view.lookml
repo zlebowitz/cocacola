@@ -118,7 +118,8 @@
     value_format_name: decimal_2
 
   - measure: total_cy_unit_cases
-    view_label: "Sales Measures - CY"
+    view_label: "Measures - Unit Cases"
+    label: "CY Unit Cases"
     type: sum
     sql: ${cy_unit_cases}
     value_format_name: decimal_2
