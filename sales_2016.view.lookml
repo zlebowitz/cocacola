@@ -1,10 +1,35 @@
 - view: sales_2016
+  extends: [
+            sales_2016_base,
+            
+            date,
+            cy_measures, 
+            py1_measures, 
+            py2_measures,
+            measures_custom_timeframe,
+            time_series_measures
+            ]
+  fields:
+  - filter: date_range
+    type: date
+    label: "CP - Date Range"
+
+- view: sales_2016_td_measures
+  extends: [
+            sales_2016_base,
+            
+            cy_measures, 
+            py1_measures, 
+            py2_measures,
+            td_measures
+            ]
+
+- view: sales_2016_base
   sql_table_name: report.t_sls_act_445_20160101
   view_label: Sales Dimensions
   extends: [channel_by_category, 
             channel_by_category_2, 
             customer_by_category, 
-            cy_measures, 
             geography_by_bottler, 
             geography_by_bottler_territory, 
             geography_slbu, 
@@ -14,15 +39,8 @@
             product_by_brand, 
             product_by_category, 
             product_by_trademark, 
-            py1_measures, 
-            py2_measures,
-            time_series_measures,
-            date,
-            measures_custom_timeframe]
+          ]
   fields:
-  - filter: date_range
-    type: date
-    label: "CP - Date Range"
     
   - dimension: bpp_code
     type: string
