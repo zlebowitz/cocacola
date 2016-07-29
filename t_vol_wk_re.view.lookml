@@ -1,4 +1,4 @@
-- explore: t_vol_wk_re
+
 - view: t_vol_wk_re
   sql_table_name: (SELECT * FROM report.t_vol_wk_re WHERE version = 'RE 1+11')
   fields:

@@ -33,18 +33,19 @@
     sql: ${TABLE}.py2_working_days
     
   - measure: max_cy_working_days
-    hidden: true
+    view_label: " Measures - Working Days"
+    group_label: "WD - Total Period"
     type: max
     sql: ${cy_working_days}
     
   - measure: max_py1_working_days
-    view_label: "Measures - Working Days"
+    view_label: " Measures - Working Days"
     group_label: "WD - Total Period"
     type: max
     sql: ${py1_working_days}
 
   - measure: max_py2_working_days
-    view_label: "Measures - Working Days"
+    view_label: " Measures - Working Days"
     group_label: "WD - Total Period"
     type: max
     sql: ${py2_working_days}

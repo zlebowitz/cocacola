@@ -3,20 +3,9 @@
 - include: "*.view.lookml"       # include all views in this project
 - include: "*.dashboard.lookml"  # include all dashboards in this project
 
-- explore: z_sls_export_time_series
-  label: Sales - Time Series
-  joins: 
-    - join: working_day_aggregations_time_series
-      type: left_outer
-      relationship: many_to_one
-      sql_on: |
-        ${z_sls_export_time_series.geo_lh1_l1_cd} = ${working_day_aggregations_time_series.bottler_id}
-        AND 
-        ${z_sls_export_time_series.day_id} = ${working_day_aggregations_time_series.day_id}         
-
-
-
 - explore: sales_2016
+  always_filter:
+    sales_2016.date_range: last 30 days
   joins: 
     - join: working_day_aggregations_time_series
       type: left_outer
@@ -32,6 +21,20 @@
       sql_on: ${sales_2016.geo_lh1_l1_cd} = ${working_day_aggregations_templated.bottler_id}
 
 
+- explore: z_sls_export_time_series
+  hidden: true
+  label: Sales - Time Series
+  joins: 
+    - join: working_day_aggregations_time_series
+      type: left_outer
+      relationship: many_to_one
+      sql_on: |
+        ${z_sls_export_time_series.geo_lh1_l1_cd} = ${working_day_aggregations_time_series.bottler_id}
+        AND 
+        ${z_sls_export_time_series.day_id} = ${working_day_aggregations_time_series.day_id}         
+
+
+
 
 # - explore: z_sls_export_custom_timeframe
 #   label: Sales - Custom Timeframe
@@ -44,6 +47,7 @@
 #       sql_on: ${z_sls_export_custom_timeframe.geo_lh1_l1_cd} = ${working_day_aggregations_templated.bottler_id}
 
 - explore: td_sales
+  hidden: true
   from: td_measures
   label: Sales
   view: z_sls_export
@@ -64,6 +68,7 @@
             AND ${z_sls_export.geo_lh1_l1_cd} = ${t_wrk_days_445.bottler_id}
 
 - explore: z_sls_export_445_custom_timeframe
+  hidden: true
   label: Sales - 445 Custom Timeframe
   joins: 
     - join: working_day_aggregations_templated
@@ -79,6 +84,7 @@
     
 
 - explore: z_sls_export_vs_re
+  hidden: true
   label: Sales vs RE
   always_filter: 
     has_rolling_estimate: Yes

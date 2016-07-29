@@ -1,18 +1,12 @@
 
 - view: date
-  fields: 
-
-  - dimension_group: day
-    view_label: "Date"
-    label: "Gregorian Date"
-    type: time
-    timeframes: [time, date, week, month]
-    sql: ${TABLE}.day_date
+  fields:
 
   - dimension: day_desc
     view_label: "Date"
     label: "Date"
     type: string
+    can_filter: false
     sql: ${TABLE}.day_desc
     order_by_field: day_id
     suggest_explore: t_cal_445
@@ -28,6 +22,7 @@
     view_label: "Date"
     label: "Month"
     type: string
+    can_filter: false
     sql: ${TABLE}.month_desc
     order_by_field: month_id
     suggest_explore: t_cal_445
@@ -43,6 +38,7 @@
     view_label: "Date"
     label: "Quarter"
     type: string
+    can_filter: false
     sql: ${TABLE}.quarter_desc
     order_by_field: quarter_id
     suggest_explore: t_cal_445
@@ -64,6 +60,7 @@
     view_label: "Date"
     label: "Week"
     type: string
+    can_filter: false
     sql: ${TABLE}.week_desc
     order_by_field: week_id
     suggest_explore: t_cal_445
@@ -79,6 +76,7 @@
     view_label: "Date"
     label: "Year"
     type: string
+    can_filter: false
     sql: ${TABLE}.year_desc
     order_by_field: year_id
     suggest_explore: t_cal_445

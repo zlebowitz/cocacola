@@ -42,6 +42,7 @@
     order_by_field: prod_lh3_l2_sort_order
     drill_fields: [prod_lh3_l1_desc]
     sql: ${TABLE}.prod_lh3_l2_desc
+    drill_fields: [prod_lh3_l1_desc]
 
   - dimension: prod_lh3_l2_sort_order
     view_label: "Product"
@@ -65,6 +66,8 @@
     required_fields: [prod_lh3_l3_cd]
     order_by_field: prod_lh3_l3_sort_order
     sql: ${TABLE}.prod_lh3_l3_desc
+    drill_fields: [prod_lh3_l2_desc, prod_lh3_l1_desc]
+
 
   - dimension: prod_lh3_l3_sort_order
     view_label: "Product"
@@ -88,6 +91,8 @@
     order_by_field: prod_lh3_l4_sort_order
     type: string
     sql: ${TABLE}.prod_lh3_l4_desc
+    drill_fields: [prod_lh3_l3_desc, prod_lh3_l2_desc, prod_lh3_l1_desc]
+
 
   - dimension: prod_lh3_l4_sort_order
     view_label: "Product"
@@ -111,6 +116,8 @@
     order_by_field: prod_lh3_l5_sort_order
     type: string
     sql: ${TABLE}.prod_lh3_l5_desc
+    drill_fields: [prod_lh3_l4_desc, prod_lh3_l3_desc, prod_lh3_l2_desc, prod_lh3_l1_desc]
+
 
   - dimension: prod_lh3_l5_sort_order
     view_label: "Product"
@@ -134,6 +141,8 @@
     order_by_field: prod_lh3_l6_sort_order
     type: string
     sql: ${TABLE}.prod_lh3_l6_desc
+    drill_fields: [prod_lh3_l5_desc, prod_lh3_l4_desc, prod_lh3_l3_desc, prod_lh3_l2_desc, prod_lh3_l1_desc]
+
 
   - dimension: prod_lh3_l6_sort_order
     view_label: "Product"
@@ -157,6 +166,7 @@
     order_by_field: prod_lh3_l7_sort_order
     type: string
     sql: ${TABLE}.prod_lh3_l7_desc
+    drill_fields: [prod_lh3_l6_desc, prod_lh3_l5_desc, prod_lh3_l4_desc, prod_lh3_l3_desc, prod_lh3_l2_desc, prod_lh3_l1_desc]
 
   - dimension: prod_lh3_l7_sort_order
     view_label: "Product"

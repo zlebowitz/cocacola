@@ -7,14 +7,14 @@
     type: max
 #     hidden: true
     group_label: "WD - Daily"
-    view_label: "Measures - Working Days"
+    view_label: " Measures - Working Days"
     sql: ${working_day_aggregations_time_series.cy_working_days_day}
     
   - measure: max_cy_working_days_week
     type: max
 #     hidden: true
     group_label: "WD - Weekly"
-    view_label: "Measures - Working Days"
+    view_label: " Measures - Working Days"
     sql: ${working_day_aggregations_time_series.cy_working_days_week}
 
 
@@ -22,21 +22,21 @@
     type: max
 #     hidden: true
     group_label: "WD - Monthly"
-    view_label: "Measures - Working Days"
+    view_label: " Measures - Working Days"
     sql: ${working_day_aggregations_time_series.cy_working_days_month}
 
   - measure: max_py1_working_days_day
     type: max
 #     hidden: true
     group_label: "WD - Daily"
-    view_label: "Measures - Working Days"
+    view_label: " Measures - Working Days"
     sql: ${working_day_aggregations_time_series.py1_working_days_day}
 
   - measure: max_py1_working_days_week
     type: max
 #     hidden: true
     group_label: "WD - Weekly"
-    view_label: "Measures - Working Days"
+    view_label: " Measures - Working Days"
     sql: ${working_day_aggregations_time_series.py1_working_days_week}
 
 
@@ -44,12 +44,13 @@
     type: max
 #     hidden: true
     group_label: "WD - Monthly"
-    view_label: "Measures - Working Days"
+    view_label: " Measures - Working Days"
     sql: ${working_day_aggregations_time_series.py1_working_days_month}
 
 
 ## Unit Cases ##
 
+# Commenting these out because they already exist in the cy, py1 and py2 measure files
 #   - dimension: cy_unit_cases
 #     hidden: true
 #     type: number
@@ -58,7 +59,7 @@
 #   - measure: total_cy_unit_cases
 #     label: "Total Unit Cases - CY"
 #     group_label: "Total"
-#     view_label: "Measures - Unit Cases"
+#     view_label: " Measures - Unit Cases"
 #     type: sum
 #     sql: ${cy_unit_cases}
 #     value_format_name: decimal_2
@@ -71,7 +72,7 @@
 #   - measure: total_py1_unit_cases
 #     label: "Total Unit Cases - PY1"
 #     group_label: "Total"
-#     view_label: "Measures - Unit Cases"
+#     view_label: " Measures - Unit Cases"
 #     type: sum
 #     sql: ${py1_unit_cases}
 #     value_format_name: decimal_2
@@ -117,14 +118,14 @@
   - measure: uc_vs_py1_day
     type: number
     group_label: "WD - Daily"
-    view_label: "Measures - Unit Cases"
+    view_label: " Measures - Unit Cases"
     sql: ${cy_uc_per_wd_day} - ${py1_uc_per_wd_day}
     value_format_name: decimal_2
     
   - measure: uc_vs_py1_day_percent_change
     type: number
     group_label: "WD - Daily"
-    view_label: "Measures - Unit Cases"
+    view_label: " Measures - Unit Cases"
     sql: ${uc_vs_py1_day} / ${py1_uc_per_wd_day}
     value_format_name: percent_2
 
@@ -133,14 +134,14 @@
   - measure: uc_vs_py1_week
     type: number
     group_label: "WD - Weekly"
-    view_label: "Measures - Unit Cases"
+    view_label: " Measures - Unit Cases"
     sql: ${cy_uc_per_wd_week} - ${py1_uc_per_wd_week}
     value_format_name: decimal_2
     
   - measure: uc_vs_py1_week_percent_change
     type: number
     group_label: "WD - Weekly"
-    view_label: "Measures - Unit Cases"
+    view_label: " Measures - Unit Cases"
     sql: ${uc_vs_py1_week} / ${py1_uc_per_wd_week}
     value_format_name: percent_2
     
@@ -148,14 +149,14 @@
   - measure: uc_vs_py1_month
     type: number
     group_label: "WD - Monthly"
-    view_label: "Measures - Unit Cases"
+    view_label: " Measures - Unit Cases"
     sql: ${cy_uc_per_wd_month} - ${py1_uc_per_wd_month}
     value_format_name: decimal_2
     
   - measure: uc_vs_py1_month_percent_change
     type: number
     group_label: "WD - Monthly"
-    view_label: "Measures - Unit Cases"
+    view_label: " Measures - Unit Cases"
     sql: ${uc_vs_py1_month} / ${py1_uc_per_wd_month}
     value_format_name: percent_2
   

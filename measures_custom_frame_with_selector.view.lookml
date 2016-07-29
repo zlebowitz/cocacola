@@ -1,15 +1,16 @@
 
-- explore: z_sls_export_custom_timeframe_with_selector
-  view: sales_2016
-  from: z_sls_export_custom_timeframe_with_selector
-  label: Sales - Custom Timeframe - Metric Selector
-#   always_filter: 
-#     date: 7 days
-  joins: 
-    - join: working_day_aggregations_templated
-      type: left_outer
-      relationship: many_to_one
-      sql_on: ${sales_2016.geo_lh1_l1_cd} = ${working_day_aggregations_templated.bottler_id}
+# ZL - 7/28/2016 - Commenting out this explore while all measures other than unit cases are hidden for the initial SL demo
+# - explore: z_sls_export_custom_timeframe_with_selector
+#   view: sales_2016
+#   from: z_sls_export_custom_timeframe_with_selector
+#   label: Sales - Custom Timeframe - Metric Selector
+# #   always_filter: 
+# #     date: 7 days
+#   joins: 
+#     - join: working_day_aggregations_templated
+#       type: left_outer
+#       relationship: many_to_one
+#       sql_on: ${sales_2016.geo_lh1_l1_cd} = ${working_day_aggregations_templated.bottler_id}
 
 
 - view: z_sls_export_custom_timeframe_with_selector

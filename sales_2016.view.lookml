@@ -12,7 +12,12 @@
   fields:
   - filter: date_range
     type: date
-    label: "CP - Date Range"
+    label: "Date Range"
+    view_label: " Date Range"
+    sql: | 
+      {% condition date_range %} ${TABLE}.day_date {% endcondition %}
+
+
 
 - view: sales_2016_td_measures
   extends: [
