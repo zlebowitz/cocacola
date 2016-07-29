@@ -119,6 +119,7 @@
     order_by_field: geo_lh2_l5_sort_order
     required_fields: [geo_lh2_l5_cd]
     drill_fields: [geo_lh2_l4_desc, geo_lh2_l3_desc, geo_lh2_l2_desc, geo_lh2_l1_desc]
+    map_layer: countries
 
   - dimension: geo_lh2_l5_sort_order
     view_label: "Geography"
