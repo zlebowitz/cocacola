@@ -1,4 +1,4 @@
-- view: working_day_aggregations
+- view: working_day_aggregations_td
   derived_table:
     sql_trigger_value: SELECT current_date()
     sql: |

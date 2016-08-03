@@ -1,6 +1,6 @@
 - view: sales_2016
   extends: [
-            sales_2016_base,
+            hierarchies,
             
             date,
             cy_measures, 
@@ -19,17 +19,7 @@
 
 
 
-- view: sales_2016_td_measures
-  extends: [
-            sales_2016_base,
-            
-            cy_measures, 
-            py1_measures, 
-            py2_measures,
-            td_measures
-            ]
-
-- view: sales_2016_base
+- view: hierarchies
   sql_table_name: report.t_sls_act_445_20160101
   view_label: Sales Dimensions
   extends: [channel_by_category, 
