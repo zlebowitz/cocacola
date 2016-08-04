@@ -7,7 +7,8 @@
       , day_desc
       , day_id
       , week_id
-      , month_desc
+      , month_id
+      , year_id
       , cy_working_day
       , sum(cy_working_day)
         OVER (
@@ -79,6 +80,16 @@
     type: number
     hidden: true
     sql: ${TABLE}.week_id
+
+  - dimension: month_id
+    type: number
+    hidden: true
+    sql: ${TABLE}.month_id
+
+  - dimension: year_id
+    type: number
+    hidden: true
+    sql: ${TABLE}.year_id
 
   - dimension: cy_working_day
     type: number
