@@ -33,6 +33,7 @@
         - 
         ${total_py1_unit_cases}/${working_day_aggregations_templated.max_py1_working_days}
       value_format_name: decimal_2
+      description: 'Absolute difference in cases per working day between current year and prior year'
 
     - measure: unit_cases_vs_py_wd_percent
       group_label: "WD - Total Period"
