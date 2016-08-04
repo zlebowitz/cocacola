@@ -20,18 +20,33 @@
       relationship: many_to_one
       sql_on: ${sales_2016.geo_lh1_l1_cd} = ${working_day_aggregations_templated.bottler_id}
 
-
-- explore: z_sls_export_time_series
-  hidden: true
-  label: Sales - Time Series
+- explore: sales_2016_td
+  label: TD Sales
+  always_filter:
+    date_picker.date: '2016-02-16'
   joins: 
-    - join: working_day_aggregations_time_series
-      type: left_outer
+    - join: working_day_aggregations_td
       relationship: many_to_one
-      sql_on: |
-        ${z_sls_export_time_series.geo_lh1_l1_cd} = ${working_day_aggregations_time_series.bottler_id}
-        AND 
-        ${z_sls_export_time_series.day_id} = ${working_day_aggregations_time_series.day_id}         
+      sql_on: 
+            |
+            ${sales_2016_td.day_id} = ${working_day_aggregations_td.day_id} 
+            AND ${sales_2016_td.geo_lh1_l1_cd} = ${working_day_aggregations_td.bottler_id}
+            
+    - join: date_picker
+      type: cross
+      relationship: many_to_one
+
+# - explore: z_sls_export_time_series
+#   hidden: true
+#   label: Sales - Time Series
+#   joins: 
+#     - join: working_day_aggregations_time_series
+#       type: left_outer
+#       relationship: many_to_one
+#       sql_on: |
+#         ${z_sls_export_time_series.geo_lh1_l1_cd} = ${working_day_aggregations_time_series.bottler_id}
+#         AND 
+#         ${z_sls_export_time_series.day_id} = ${working_day_aggregations_time_series.day_id}         
 
 
 
