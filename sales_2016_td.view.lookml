@@ -1,4 +1,5 @@
 - view: sales_2016_td
+  sql_table_name: report.t_sls_act_445
   extends: [
             hierarchies,
             
