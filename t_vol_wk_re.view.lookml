@@ -32,7 +32,7 @@
     
   - measure: total_re_cp_unit_cases
     label: RE Unit Cases
-    view_label: Sales Measures - CY
+    view_label: " Measures - Unit Cases"
     type: sum
     sql: ${cp_unit_cases}
 
