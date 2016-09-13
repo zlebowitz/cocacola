@@ -1,5 +1,6 @@
 
 - view: date
+  extends: date_ids
   fields:
 
   - dimension: day_desc
@@ -8,11 +9,11 @@
     type: string
     can_filter: false
     sql: ${TABLE}.day_desc
-    order_by_field: day_id
+    order_by_field: day_id_raw
     suggest_explore: t_cal_445
     suggest_dimension: day_desc
 
-  - dimension: day_id
+  - dimension: day_id_raw
     hidden: true
     view_label: "Date"
     type: number
@@ -24,11 +25,11 @@
     type: string
     can_filter: false
     sql: ${TABLE}.month_desc
-    order_by_field: month_id
+    order_by_field: month_id_raw
     suggest_explore: t_cal_445
     suggest_dimension: month_desc
     
-  - dimension: month_id
+  - dimension: month_id_raw
     hidden: true
     view_label: "Date"
     type: string
@@ -63,11 +64,11 @@
     type: string
     can_filter: false
     sql: ${TABLE}.week_desc
-    order_by_field: week_id
+    order_by_field: week_id_raw
     suggest_explore: t_cal_445
     suggest_dimension: week_desc
 
-  - dimension: week_id
+  - dimension: week_id_raw
     view_label: "Date"
     hidden: true
     type: string
@@ -79,11 +80,11 @@
     type: string
     can_filter: false
     sql: ${TABLE}.year_desc
-    order_by_field: year_id
+    order_by_field: year_id_raw
     suggest_explore: t_cal_445
     suggest_dimension: year_desc
 
-  - dimension: year_id
+  - dimension: year_id_raw
     view_label: "Date"
     hidden: true
     type: string

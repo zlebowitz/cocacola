@@ -14,7 +14,7 @@
       sql_on: |
         ${sales_2016.geo_lh1_l1_cd} = ${working_day_aggregations_time_series.bottler_id}
         AND 
-        ${sales_2016.day_id} = ${working_day_aggregations_time_series.day_id}         
+        ${sales_2016.day_id_raw} = ${working_day_aggregations_time_series.day_id}         
 
     - join: working_day_aggregations_templated
       type: left_outer
